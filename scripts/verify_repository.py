@@ -39,7 +39,7 @@ def sha256(path):
 
 
 def repository_files():
-    return sorted(path for path in ROOT.rglob("*") if path.is_file() and "validation" not in path.relative_to(ROOT).parts and path.name != "MANIFEST.sha256" and "__pycache__" not in path.parts)
+    return sorted(path for path in ROOT.rglob("*") if path.is_file() and "validation" not in path.relative_to(ROOT).parts and ".git" not in path.relative_to(ROOT).parts and path.name != "MANIFEST.sha256" and "__pycache__" not in path.parts)
 
 
 def write_manifest():
