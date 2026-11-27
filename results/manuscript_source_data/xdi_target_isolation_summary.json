@@ -1,0 +1,18 @@
+{
+  "xdi": {
+    "corpus_spectra": 8555,
+    "excluded_target_spectra": 784,
+    "exact_target_corpus_overlap": 0,
+    "weight_sha256": "669410e855e7700e6794cd0c4414aadca59b9b6e4c2d893c2e4ace06013ba278",
+    "architecture": "ResNet1-128; input512; 60 epochs"
+  },
+  "xgas": {
+    "corpus_spectra": 9279,
+    "excluded_target_spectra": 60,
+    "weight_sha256": "1f6796283054e035c65642348897578dbd5b60a79c7adb8cf503720fb902fffb",
+    "architecture": "ResNet1-128; input512; 60 epochs",
+    "source_evidence": "results/phase12a_data_audit/小结.md"
+  },
+  "haffner_public_test_rows": 75,
+  "haffner_public_test_rows_with_identical_train_copy": 70
+}

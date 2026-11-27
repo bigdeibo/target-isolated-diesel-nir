@@ -1,0 +1,4 @@
+dataset,role,spectra_rows,wavelength_range_nm,spectral_points,valid_samples,pretraining_weight
+swri_diesel,seven_property_main_analysis,784,750-1550,401,CN381; six other properties395 each,xdi
+haffner_diesel,independent_cn_recalibration_and_oof_replication,179,833.36-1550 common-wavelength primary,common grid,179 unique spectra; 70 of75 public test rows have training copies,not used in pretraining
+kalivas_gasoline,transfer_extension,60,900-1700,401,60 unique spectra; diffuse-reflectance log(1/R),xgas

@@ -1,0 +1,44 @@
+{
+  "checks": [
+    {
+      "label": "SWRI CN",
+      "runs": 26,
+      "maximum_absolute_differences": {
+        "n": 0.0,
+        "rmsep": 4.440892098500626e-16,
+        "r2": 2.220446049250313e-16,
+        "mae": 4.440892098500626e-16,
+        "rpd": 4.440892098500626e-16,
+        "bias_pred_minus_true": 9.71445146547012e-17
+      },
+      "passed": true
+    },
+    {
+      "label": "Haffner CN",
+      "runs": 40,
+      "maximum_absolute_differences": {
+        "n": 0.0,
+        "rmsep": 4.440892098500626e-16,
+        "r2": 2.220446049250313e-16,
+        "mae": 8.881784197001252e-16,
+        "rpd": 1.7763568394002505e-15,
+        "bias_pred_minus_true": 9.71445146547012e-17
+      },
+      "passed": true
+    },
+    {
+      "label": "six additional properties",
+      "runs": 264,
+      "maximum_absolute_differences": {
+        "n": 0.0,
+        "rmsep": 1.7763568394002505e-15,
+        "r2": 2.220446049250313e-16,
+        "mae": 1.7763568394002505e-15,
+        "rpd": 3.552713678800501e-15,
+        "bias_pred_minus_true": 9.43689570931383e-16
+      },
+      "passed": true
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,10 @@
+method,input_representation,training_configuration,evaluation_role,source
+target_isolated_masked_autoencoder_pretraining,raw401 to interpolation512 and per-spectrum SNV,ResNet1-128; continuous-band masked autoencoding; 60 epochs,xdi; xgas for gasoline only,external/pi_anil_mae/PROVENANCE.md
+target_isolated_masked_autoencoder_finetuning,"SG1(window11,poly2,deriv1) to interpolation512 to per-spectrum SNV",full fine-tuning; Adam initial lr0.001; batch32; max500 epochs; patience50; inner-best state,inner-three equal-weight ensemble; final seeds1/2/3,scripts/run_phase09b_sg1_outer.py; scripts/run_phase13_property_resnet.py
+matched_random_initialization,same as target-isolated fine-tuning,same architecture optimization inner selection and ensemble,isolates initialization contribution,scripts/run_phase13_property_resnet.py
+pls,center/SNV/SG1/SG1+SNV selected by inner validation,latent components1-15 selected by inner validation,shared outer test folds,scripts/run_phase13_property_classical.py
+svr,preprocessing selected by inner validation,C=1/10/100; epsilon=0.05/0.1/0.2,shared outer test folds,scripts/run_phase13_property_classical.py
+boss_pls,BOSS-style wavelength selection with PLS,CN classical comparator with inner-validation model selection,shared outer test folds,results/phase10e_newsplit/oof_summary.csv
+deepspectra_raw,raw401,inner3-fold; seed1 early stopping; median of three best epochs; full outer-training-pool refit,final seeds1/2/3,scripts/run_phase13_property_deepspectra.py
+deepspectra_sg1_snv,"SG1(11,2,1) and per-spectrum SNV at401 points",same architecture and training protocol as raw DeepSpectra,preprocessing sensitivity arm,scripts/run_phase13_property_deepspectra.py
+ipa,full and reduced wavelength Haffner inputs,existing complete OOF predictions reused,Haffner comparison only,results/phase10e_haffner/oof_summary.csv

@@ -1,0 +1,37 @@
+{
+  "checks": {
+    "spectra_shape_8555_512": true,
+    "sources_rows_8555": true,
+    "source_counts_match_manifest": true,
+    "no_diesel_or_haffner_source_label": true,
+    "spectra_file_sha_matches": true,
+    "sources_file_sha_matches": true,
+    "target_resampled_exact_overlap_zero": true,
+    "xdi_weight_sha_matches": true,
+    "xdi_weight_epoch_60": true,
+    "xdi_weight_arch_resnet1": true,
+    "xdi_weight_emb128": true,
+    "xdi_weight_input512": true,
+    "haffner_public_duplicate_count_70": true
+  },
+  "passed": true,
+  "spectra_shape": [
+    8555,
+    512
+  ],
+  "source_counts": {
+    "simulated": 6000,
+    "evoo": 1995,
+    "mayonnaise": 162,
+    "nist_ir": 98,
+    "corn_m5": 80,
+    "corn_mp5": 80,
+    "corn_mp6": 80,
+    "gasoline": 60
+  },
+  "target_spectra": 784,
+  "target_resampled_exact_overlap": 0,
+  "public_haffner_test_rows": 75,
+  "public_haffner_test_rows_with_identical_train_copy": 70,
+  "note": "Exact overlap checked after raw401 -> position-based float32 interpolation512, matching the corpus representation."
+}

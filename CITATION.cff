@@ -1,0 +1,4 @@
+cff-version: 1.2.0
+message: "If you use this code or the supplied result data, please cite the associated manuscript."
+title: "Target-isolated masked autoencoding for multi-property near-infrared analysis of diesel fuels"
+type: software

@@ -1,0 +1,28 @@
+claim_id,claim,value,unit,source_file,calculation,destination
+N01,SWRI CN target-isolated MAE RMSEP,2.1327652713812024,CN,results/phase10e_newsplit/oof_summary.csv,mean of six repeat-seed OOF RMSEP values,Abstract;Fig5;Table4
+N02,SWRI CN improvement over BOSS PLS,3.3958220103126693,percent,results/phase10e_newsplit/oof_summary.csv,(BOSS RMSEP-xdi RMSEP)/BOSS RMSEP*100,Abstract;Fig5;Table3
+N03,SWRI CN pretraining benefit,3.4464497315680243,percent,results/phase10e_newsplit/oof_summary.csv,(random RMSEP-xdi RMSEP)/random RMSEP*100,Fig4;Table3
+N04,Haffner common-wavelength target-isolated MAE RMSEP,1.8350934789511657,CN,results/phase10e_haffner/oof_summary.csv,mean of six repeat-seed OOF RMSEP values,Abstract;Fig6;Table4
+N05,Haffner improvement over matched random initialization,7.711422408348352,percent,results/phase10e_haffner/oof_summary.csv,(random RMSEP-xdi RMSEP)/random RMSEP*100,Fig6;Table4
+N06,Haffner improvement over PLS-reduced,5.95142856596509,percent,results/phase10e_haffner/oof_summary.csv,(PLS-reduced RMSEP-xdi RMSEP)/PLS-reduced RMSEP*100,Abstract;Fig6;Table4
+N07_CN,CN confirmation-CV pretraining benefit,3.4464497315680243,percent,tables/table_3_swri_seven_property_performance.csv,(random RMSEP-xdi RMSEP)/random RMSEP*100,Fig4;Table3
+N07_FLASH,FLASH confirmation-CV pretraining benefit,2.4965741585445698,percent,tables/table_3_swri_seven_property_performance.csv,(random RMSEP-xdi RMSEP)/random RMSEP*100,Fig4;Table3
+N07_VISC,VISC confirmation-CV pretraining benefit,-5.102320391957759,percent,tables/table_3_swri_seven_property_performance.csv,(random RMSEP-xdi RMSEP)/random RMSEP*100,Fig4;Table3
+N07_D4052,D4052 confirmation-CV pretraining benefit,17.99627102768854,percent,tables/table_3_swri_seven_property_performance.csv,(random RMSEP-xdi RMSEP)/random RMSEP*100,Fig4;Table3
+N07_TOTAL,TOTAL confirmation-CV pretraining benefit,4.69667408871544,percent,tables/table_3_swri_seven_property_performance.csv,(random RMSEP-xdi RMSEP)/random RMSEP*100,Fig4;Table3
+N07_BP50,BP50 confirmation-CV pretraining benefit,7.07520944921599,percent,tables/table_3_swri_seven_property_performance.csv,(random RMSEP-xdi RMSEP)/random RMSEP*100,Fig4;Table3
+N07_FREEZE,FREEZE confirmation-CV pretraining benefit,7.12234675107935,percent,tables/table_3_swri_seven_property_performance.csv,(random RMSEP-xdi RMSEP)/random RMSEP*100,Fig4;Table3
+N08,Number of seven targets with stable repeat23 pretraining benefit,6.0,targets,tables/table_3_swri_seven_property_performance.csv,count clear_advantage_pretraining among seven repeat23 rows,Abstract;Fig4
+N09,Raw DeepSpectra mean RMSEP wins,12.0,of12,results/phase13_deepspectra_summary/comparison_summary.csv,count positive relative improvements,Fig7
+N10,Raw DeepSpectra clear advantages,11.0,of12,results/phase13_deepspectra_summary/comparison_summary.csv,count clear_advantage,Fig7
+N11,SG1+SNV DeepSpectra mean RMSEP wins,12.0,of12,results/phase13_deepspectra_sg1snv_summary/comparison_summary.csv,count positive relative improvements,Fig7
+N12,SG1+SNV DeepSpectra clear advantages,10.0,of12,results/phase13_deepspectra_sg1snv_summary/comparison_summary.csv,count clear_advantage,Fig7
+N13,CN development benefit of SG1 downstream input,4.031057440491172,percent,results/phase09b_sg1_outer/oof_summary.csv,(raw RMSEP-SG1 RMSEP)/raw RMSEP*100,Fig8A
+N14_seed0,SG1 pretraining relative change for seed0,1.5076410776115152,percent,results/phase10c_downstream/mean_inner_fold_rmse.csv,mean SG1/mean existing raw-xdi-1; positive means higher inner-fold RMSE,Fig8B
+N14_seed1,SG1 pretraining relative change for seed1,1.6871910170243711,percent,results/phase10c_downstream/mean_inner_fold_rmse.csv,mean SG1/mean existing raw-xdi-1; positive means higher inner-fold RMSE,Fig8B
+N15,Gasoline xgas pretraining benefit,3.822876604853099,percent,results/phase12b_gasoline/oof_summary.csv,(random RMSEP-xgas RMSEP)/random RMSEP*100,Fig8D
+N16,Gasoline raw pretraining benefit,10.148910682383773,percent,results/phase12b_gasoline/raw_sensitivity_oof_summary.csv,(raw random RMSEP-raw candidate RMSEP)/raw random RMSEP*100,Fig8D
+N17,Gasoline RMSEP increase when downstream SG1 is removed,6.17783336208343,percent,results/phase12b_gasoline/raw_sensitivity_oof_summary.csv,(raw candidate RMSEP-SG1 candidate RMSEP)/SG1 candidate RMSEP*100,Fig8D
+N18,Haffner full-wavelength target-isolated MAE RMSEP,1.7853024185941706,CN,results/phase11a_wavelength/oof_summary.csv,mean of six full-wavelength OOF RMSEP values,Fig6D
+N19,Haffner full versus common wavelength improvement,2.713271063741822,percent,results/phase11a_wavelength/oof_summary.csv,(common RMSEP-full RMSEP)/common RMSEP*100,Fig6D
+N20,Haffner common-wavelength improvement over information-matched PLS,1.9331321402211061,percent,results/phase11a_wavelength/oof_summary.csv,(PLS common RMSEP-xdi common RMSEP)/PLS common RMSEP*100,Fig6

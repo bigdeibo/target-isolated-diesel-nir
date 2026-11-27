@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "pretrain_and_data_isolation": true,
+    "outer_inner_split_reconstruction": true,
+    "all_methods_share_outer_test": true,
+    "ensemble_and_single_reconstruction": true,
+    "metrics_recomputed_from_oof": true
+  },
+  "passed": true,
+  "split_fold_records": 140,
+  "prediction_alignment_records": 1750,
+  "ensemble_groups": 14,
+  "metric_comparisons": 3330,
+  "models_retrained": 0,
+  "result_files_modified": false,
+  "tolerance_absolute_or_relative": 1e-07
+}

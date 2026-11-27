@@ -1,0 +1,7 @@
+{
+  "target_isolated_mae_rmsep": 0.2448565643270262,
+  "pls_rmsep": 0.2326876139130044,
+  "pretraining_benefit_pct": 3.822876604853099,
+  "raw_pretraining_benefit_pct": 10.148910682383773,
+  "raw_removal_rmsep_increase_pct": 6.17783336208343
+}

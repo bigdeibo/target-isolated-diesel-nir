@@ -1,0 +1,42 @@
+{
+  "encoder": {
+    "architecture": "1D ResNet",
+    "input_positions": 512,
+    "embedding_dimensions": 128,
+    "stem": {"kernel": 25, "stride": 2, "channels": 32},
+    "residual_stages": [[32, 256], [64, 128], [128, 64]]
+  },
+  "pretraining": {
+    "input": "raw spectrum, normalized-position interpolation to 512, per-spectrum SNV",
+    "masked_coverage": [0.25, 0.40],
+    "contiguous_segments": [3, 6],
+    "loss": "mean squared error at masked positions",
+    "epochs": 60,
+    "batch_size": 128,
+    "optimizer": "Adam",
+    "initial_learning_rate": 0.001,
+    "seed": 0,
+    "decoder": "Linear(128,256), ReLU, Linear(256,512)",
+    "decoder_used_in_supervised_training": false
+  },
+  "supervised_fine_tuning": {
+    "input": "SG1(window=11,poly=2,deriv=1), interpolation to 512, per-spectrum SNV",
+    "readout": "Linear(128,1)",
+    "full_fine_tuning": true,
+    "optimizer": "Adam",
+    "batch_size": 32,
+    "initial_learning_rate": 0.001,
+    "learning_rate_rule": "0.001*0.001**(step/10000)",
+    "maximum_epochs": 500,
+    "patience": 50,
+    "selection": "best inner-validation state",
+    "ensemble": "equal mean of three complete inner-fold models",
+    "final_seeds": [1, 2, 3],
+    "full_outer_pool_refit": false,
+    "batch_normalization_recalibration": false
+  },
+  "weights": {
+    "xdi": {"excluded_target": "all 784 SWRI diesel spectra", "retained_corpus_spectra": 8555, "sha256": "669410e855e7700e6794cd0c4414aadca59b9b6e4c2d893c2e4ace06013ba278"},
+    "xgas": {"excluded_target": "all 60 gasoline spectra", "retained_corpus_spectra": 9279, "sha256": "1f6796283054e035c65642348897578dbd5b60a79c7adb8cf503720fb902fffb"}
+  }
+}

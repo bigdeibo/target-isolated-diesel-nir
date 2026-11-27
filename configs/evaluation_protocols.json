@@ -1,0 +1,41 @@
+{
+  "outer_folds": 5,
+  "inner_folds": 3,
+  "regression_strata": 5,
+  "final_seeds": [1, 2, 3],
+  "index_convention": "Repository CV repetitions and folds are one-based; seed formulas use the corresponding zero-based indices",
+  "protocols": {
+    "swri_diesel": {
+      "properties": ["cetane_number", "distillation_50", "density_d4052", "flash_point", "freezing_point", "total_aromatics", "kinematic_viscosity"],
+      "initial_cv_repetitions": [1, 2],
+      "confirmation_cv_repetitions": [3, 4],
+      "outer_seed": "20261105+1009*zero_based_repeat",
+      "deep_inner_seed": "20263000+1009*zero_based_repeat+17*zero_based_outer_fold",
+      "classical_inner_seed": "20264000+1009*zero_based_repeat+17*zero_based_outer_fold",
+      "oof_runs_per_group_for_each_deep_initialization": 6
+    },
+    "haffner_diesel": {
+      "property": "cetane_number",
+      "unique_spectra": 179,
+      "cv_repetitions": [1, 2],
+      "primary_wavelength_nm": [833.36, 1550.0],
+      "outer_seed": "20261104+1009*zero_based_repeat",
+      "deep_inner_seed": "20262026+1009*zero_based_repeat+17*zero_based_outer_fold",
+      "classical_inner_seed": "20263030+1009*zero_based_repeat+17*zero_based_outer_fold",
+      "evaluation": "independent-dataset replication with recalibration",
+      "oof_runs_for_each_deep_initialization": 6
+    },
+    "kalivas_gasoline": {
+      "property": "octane_number",
+      "unique_spectra": 60,
+      "cv_repetitions": [1, 2, 3, 4, 5],
+      "outer_seed": "20261116+1009*zero_based_repeat",
+      "deep_inner_seed": "20263116+1009*zero_based_repeat+17*zero_based_outer_fold",
+      "classical_inner_seed": "20264116+1009*zero_based_repeat+17*zero_based_outer_fold",
+      "oof_runs_for_each_deep_initialization": 15
+    }
+  },
+  "analysis_unit": "paired CV-repetition and final-seed runs",
+  "independent_experimental_sample_size_increased_by_reruns": false,
+  "cross_property_average_r_squared_used": false
+}

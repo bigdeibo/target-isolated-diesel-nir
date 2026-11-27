@@ -1,0 +1,39 @@
+{
+  "xdi": {
+    "target_dataset": "swri_diesel",
+    "excluded_spectra": 784,
+    "retained_spectra": 8555,
+    "source_counts": {
+      "simulated": 6000,
+      "evoo": 1995,
+      "mayonnaise": 162,
+      "nist_ir": 98,
+      "corn_m5": 80,
+      "corn_mp5": 80,
+      "corn_mp6": 80,
+      "gasoline": 60
+    },
+    "source_spectra_sha256": "7efe058bf5f029913594d37343d16fe43bd3df751dd3a79198035a5d7c59a853",
+    "source_labels_sha256": "ee60dcad5bfe88d1f9016490db0533070b3c5ac151725c738c7e94282680895d",
+    "encoder_sha256": "669410e855e7700e6794cd0c4414aadca59b9b6e4c2d893c2e4ace06013ba278",
+    "haffner_diesel_used": false
+  },
+  "xgas": {
+    "target_dataset": "kalivas_gasoline",
+    "excluded_spectra": 60,
+    "retained_spectra": 9279,
+    "source_counts": {
+      "simulated": 6000,
+      "diesel": 784,
+      "evoo": 1995,
+      "mayonnaise": 162,
+      "nist_ir": 98,
+      "corn_m5": 80,
+      "corn_mp5": 80,
+      "corn_mp6": 80
+    },
+    "encoder_sha256": "1f6796283054e035c65642348897578dbd5b60a79c7adb8cf503720fb902fffb"
+  },
+  "raw_data_redistributed": false,
+  "gasoline_source_package": "Kalivas 1997 via R pls package gasoline_arrays.npz"
+}

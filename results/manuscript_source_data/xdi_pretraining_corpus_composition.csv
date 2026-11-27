@@ -1,0 +1,9 @@
+weight,source,source_description,spectra_count
+xdi,simulated,simulated_spectra,6000
+xdi,evoo,olive_oil_nir,1995
+xdi,mayonnaise,mayonnaise_nir,162
+xdi,nist_ir,nist_infrared_reference,98
+xdi,corn_m5,corn_instrument_m5,80
+xdi,corn_mp5,corn_instrument_mp5,80
+xdi,corn_mp6,corn_instrument_mp6,80
+xdi,gasoline,kalivas_gasoline,60

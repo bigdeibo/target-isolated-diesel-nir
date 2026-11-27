@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+validation/
+training_output/
+repository_validation.json
+data/swri_diesel/
+data/haffner_ipa/
+data/gasoline_kalivas/
+data/pretrain_corpus_xdi/
+data/pretrain_corpus_xgas/

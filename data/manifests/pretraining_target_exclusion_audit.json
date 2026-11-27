@@ -1,0 +1,17 @@
+{
+  "representation": "raw spectrum interpolated by normalized position to 512 float32 values before hashing",
+  "xdi": {
+    "target_spectra": 784,
+    "retained_corpus_spectra": 8555,
+    "exact_target_matches": 0,
+    "unique_corpus_hashes": 8547,
+    "passed": true
+  },
+  "xgas": {
+    "target_spectra": 60,
+    "retained_corpus_spectra": 9279,
+    "exact_target_matches": 0,
+    "unique_corpus_hashes": 9271,
+    "passed": true
+  }
+}

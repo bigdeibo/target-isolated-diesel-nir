@@ -1,0 +1,16 @@
+concept,manuscript_term,repository_identifier,definition
+method,target-isolated masked autoencoder,target_isolated_masked_autoencoder,Masked autoencoding after exclusion of spectra from the target calibration dataset
+weight,xdi,xdi,Pretraining checkpoint with all 784 SWRI diesel spectra excluded
+weight,xgas,xgas,Pretraining checkpoint with all 60 gasoline spectra excluded
+pretraining input,raw-spectrum SNV,raw_snv,Raw spectrum normalized independently by standard normal variate transformation
+fine-tuning input,SG1 interpolation512 SNV,sg1_interpolation512_snv,"SG1 filtering, interpolation to 512 positions, and per-spectrum SNV"
+estimator,inner-three equal-weight ensemble,inner_three_equal_weight_ensemble,Equal average of the best-validation models from three inner folds
+control,matched random initialization,matched_random_initialization,"Random initialization with the same architecture, inputs, splits, seeds, and ensemble rule"
+evaluation,repeated nested cross-validation,repeated_nested_cross_validation,Repeated outer evaluation with separate inner model selection
+evaluation,cross-validation repetition,cv_repetition,One complete set of five outer folds for one partition seed
+evaluation group,Initial CV (repetitions 1–2),initial_cv_repetitions_1_2,"The first two CV repetitions, reported as the initial evaluation"
+evaluation group,Confirmation CV (repetitions 3–4),confirmation_cv_repetitions_3_4,"The next two CV repetitions, reported separately as confirmation"
+evaluation,out-of-fold prediction,oof_prediction,Prediction for a sample assigned to the outer test fold
+replication,independent Haffner replication,independent_haffner_replication,Independent-dataset recalibration followed by strict OOF evaluation
+task,multi-property analysis,multi_property_analysis,Seven independent single-property diesel calibration models
+extension,gasoline transfer extension,gasoline_transfer_extension,Gasoline calibration with the gasoline-excluded pretraining checkpoint

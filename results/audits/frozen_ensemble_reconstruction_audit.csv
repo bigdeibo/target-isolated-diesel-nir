@@ -1,0 +1,15 @@
+scope,member_rows,ensemble_rows,member_duplicate_keys,ensemble_duplicate_keys,ensemble_max_abs_reconstruction_diff,single_max_abs_reconstruction_diff,complete_oof_counts,passed
+FLASH_repeat01,14220,4740,0,0,1.4210854715202004e-14,0.0,True,True
+FLASH_repeat23,14220,4740,0,0,1.4210854715202004e-14,0.0,True,True
+VISC_repeat01,14220,4740,0,0,8.881784197001252e-16,0.0,True,True
+VISC_repeat23,14220,4740,0,0,8.881784197001252e-16,0.0,True,True
+D4052_repeat01,14220,4740,0,0,0.0,0.0,True,True
+D4052_repeat23,14220,4740,0,0,0.0,0.0,True,True
+TOTAL_repeat01,14220,4740,0,0,7.105427357601002e-15,0.0,True,True
+TOTAL_repeat23,14220,4740,0,0,7.105427357601002e-15,0.0,True,True
+BP50_repeat01,14220,4740,0,0,1.1368683772161603e-13,0.0,True,True
+BP50_repeat23,14220,4740,0,0,1.1368683772161603e-13,0.0,True,True
+FREEZE_repeat01,14220,4740,0,0,7.105427357601002e-15,0.0,True,True
+FREEZE_repeat23,14220,4740,0,0,7.105427357601002e-15,0.0,True,True
+CN_repeat23,13716,4572,0,0,1.4210854715202004e-14,0.0,True,True
+Haffner_repeat01,6444,2148,0,0,1.4210854715202004e-14,0.0,True,True
